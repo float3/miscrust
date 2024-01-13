@@ -1,4 +1,3 @@
-use arboard::Clipboard;
 use chrono::Timelike;
 use std::env;
 use std::str::FromStr;
@@ -62,7 +61,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         + &(now.timestamp() + 1).to_string()
         + ":F>";
 
-    Clipboard::new()?.set_text(string)?;
-    
+    println!("{}", string);
+
     Ok(())
 }
