@@ -1,8 +1,6 @@
 use std::env;
 
-use image::{
-    imageops, DynamicImage,
-};
+use image::{imageops, DynamicImage};
 
 fn main() {
     let args = env::args().collect::<Vec<String>>();
@@ -11,7 +9,7 @@ fn main() {
         let entry = entry.unwrap();
         let path = entry.path();
         let path = path.to_str().unwrap();
-        modify_and_safe(path.to_string(),args[1].clone());
+        modify_and_safe(path.to_string(), args[1].clone());
     }
 }
 
@@ -20,9 +18,7 @@ fn lerp(a: f32, b: f32, c: f32) -> f32 {
 }
 
 fn modify_and_safe(path: String, logo: String) {
-    let mut img = image::open(logo)
-        .unwrap()
-        .into_rgba32f();
+    let mut img = image::open(logo).unwrap().into_rgba32f();
 
     let mut img2 = image::open(path.clone()).unwrap().into_rgba32f();
 

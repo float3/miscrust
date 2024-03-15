@@ -52,7 +52,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .expect("no second");
 
     if let Some(offset) = offset {
-        now += chrono::Duration::days(offset as i64);
+        now += chrono::Duration::try_days(offset as i64).unwrap();
     }
 
     let string: String = "<t:".to_string()
