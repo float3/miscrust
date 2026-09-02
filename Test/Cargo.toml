@@ -2,8 +2,10 @@
 name = "test"
 version = "0.1.0"
 edition = "2021"
+license = "AGPL-3.0-only"
+repository = "https://github.com/float3/miscrust"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-image = "0.24.6"
+image = "0.25.10"
